@@ -1,0 +1,52 @@
+{
+  "name": "orderly-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@orderly.network/affiliate": "2.8.8",
+    "@orderly.network/hooks": "2.8.8",
+    "@orderly.network/i18n": "2.8.8",
+    "@orderly.network/markets": "2.8.8",
+    "@orderly.network/portfolio": "2.8.8",
+    "@orderly.network/react-app": "2.8.8",
+    "@orderly.network/trading": "2.8.8",
+    "@orderly.network/trading-leaderboard": "2.8.8",
+    "@orderly.network/trading-rewards": "2.8.8",
+    "@orderly.network/types": "2.8.8",
+    "@orderly.network/ui": "2.8.8",
+    "@orderly.network/ui-scaffold": "2.8.8",
+    "@orderly.network/utils": "2.8.8",
+    "@orderly.network/wallet-connector": "2.8.8",
+    "@solana/wallet-adapter-base": "^0.9.27",
+    "@orderly.network/default-evm-adapter": "^2.8.8",
+    "@reown/appkit": "1.8.15",
+    "@reown/appkit-adapter-wagmi": "1.8.15",
+    "@tanstack/react-query": "^5.90.12",
+    "@wagmi/connectors": "^5.11.2",
+    "@wagmi/core": "^2.22.1",
+    "@web3modal/wagmi": "^5.1.11",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "swr": "^2.1.5",
+    "viem": "^2.43.3",
+    "wagmi": "2.19.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+}
