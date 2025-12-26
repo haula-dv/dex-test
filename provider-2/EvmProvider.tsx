@@ -5,9 +5,23 @@ import { init, Web3OnboardProvider } from '@web3-onboard/react';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import React, { FC } from 'react';
 // https://dashboard.walletconnect.com/01692520-64b0-4ed8-8713-cdac19098bff/2202d3e2-19b7-4dd2-954d-3208dfdb639a
+import metamaskModule from "@web3-onboard/metamask";
 
 export const EvmProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
   const injected = injectedModule();
+
+  const metamask = metamaskModule({
+    options: {
+      extensionOnly: false,
+      dappMetadata: {
+        name: "tcmp-orderly",
+      },
+    },
+  });
+
+
+
+
   const walletConnect = walletConnectModule({
     projectId: "1425135d05a58da2119aba3bbe0141de",
     requiredChains: [10, 42161],
@@ -16,7 +30,7 @@ export const EvmProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
   });
 
   const onboard = init({
-    wallets: [injected, walletConnect],
+    wallets: [injected, metamask, walletConnect],
     // Only include Arbitrum and Optimism chains (Orderly Network officially supports these)
     chains: supportedEvmChains
       .filter((chain) =>
