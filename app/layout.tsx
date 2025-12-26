@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@orderly.network/ui/dist/styles.css";
 import { Providers } from "./providers";
+import { OrderlyRootProvider } from "@/provider-2/OrderlyRootProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
+        <OrderlyRootProvider>
           {children}
-        </Providers>
+        </OrderlyRootProvider>
       </body>
     </html>
   );
