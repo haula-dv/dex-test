@@ -12,7 +12,7 @@ export const EvmProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
     projectId: "1425135d05a58da2119aba3bbe0141de",
     requiredChains: [10, 42161],
     optionalChains: [421614, 11155420],
-    dappUrl: "https://tcmp-orderly.vercel.app",
+    dappUrl: "https://dex-test-omega.vercel.app",
   });
 
   const onboard = init({
